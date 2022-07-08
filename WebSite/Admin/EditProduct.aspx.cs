@@ -41,6 +41,7 @@ namespace WebSite.Admin
             {
                 lblMessage.Text = ex.Message;
                 lblMessage.CssClass = "Error";
+                MessageBox.Show("Error");
             }
         }
 
