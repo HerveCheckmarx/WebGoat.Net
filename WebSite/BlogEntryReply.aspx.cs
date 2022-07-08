@@ -29,16 +29,7 @@ namespace WebSite
                     lblErrorMessage.Text = "No blog entry was found.  Please go back and try again.";
                     return;
                 }
-                var blogEntry = _blogEntryReposistory.GetBlogEntry(_blogEntryId);
-                var sb = new StringBuilder();
-                sb.Append("<div>");
-                sb.AppendFormat("<div class='blogEntryTitle'>{0}</div>", blogEntry.Title);
-                sb.AppendFormat("<div class='blogEntryContents'>{0}</div>", blogEntry.Contents);
-                sb.AppendFormat("<div class='blogEntryAuthor'>{0}</div>", blogEntry.Author);
-                sb.AppendFormat("<div class='blogEntryPostedDate'>{0}</div>", blogEntry.PostedDate);
-                sb.Append("</div>");
 
-                lblBlogEntry.Text = sb.ToString();
             }
             else
             {
